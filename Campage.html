@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "stylingcampage.css">
+</head>
+<body>
+    <div class = "contain">
+        <div class="header">
+            <div class = "logoname">
+                <div ckass = "logoimg"><img src = "logo.jpg" width = 70px height = 70px></div><div class ="name">FaceAtten</div>
+            </div>
+            
+            <div class = "home_link">
+                <a href = "Page.html">Home</a>
+            </div>
+            <div class = "instruction">
+                <a href = "Page.html">Instructions</a>
+            </div>
+            <div class = "about_link">
+                <a href = "Page.html">About</a>
+            </div>
+        </div>
+        <div class = "vid">
+            <video id = "webcam" autoplay></video>
+        </div>
+    </div>
+    <script>
+        const videoElement = document.getElementById('webcam');
+        function startWebcam() {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function(stream) {
+                        videoElement.srcObject = stream;
+                    })
+                    .catch(function(error) {
+                        console.error('Error accessing webcam: ', error);
+                    });
+            } else {
+                alert('Your browser does not support webcam access');
+            }
+        }
+        window.onload = startWebcam;
+    </script>
+</body>
+</html>

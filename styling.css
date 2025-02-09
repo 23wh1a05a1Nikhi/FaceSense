@@ -1,0 +1,119 @@
+body{
+    background-image: url(Facesenseimgbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+}
+.name{
+    font-family:"Audiowide", sans-serif;
+    color: rgb(0, 53, 158); 
+    font-weight: bolder;
+}
+.header{
+    display: grid;
+    grid-template-columns: 3.5rem 5fr 0.7fr 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    font-size: 3rem;
+    padding: 1rem 1rem 1rem 1rem;
+    opacity: 70%;
+}
+
+@keyframes fadeInBouncey {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home_link, .about_link, .instruction{
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    animation: fadeInBouncey 1s ease-out;
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.quote{
+    background-color: rgba(231, 235, 250, 0.585);
+    margin-top: 10%;
+    margin-right: 64%;
+    margin-left: 7%;
+    margin-bottom: 3%;
+    border-radius: 7rem;
+    padding-left: 4rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-family:"Sofia", sans-serif;
+    color:rgba(3, 33, 95, 0.925);
+    text-align: center;
+    animation: fadeInBounce 1s ease-out;
+}
+.logoimg{
+    margin-right: 1%;
+}
+.start_button{
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 12%;
+    border-radius: 2rem;
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: rgba(231, 235, 250, 0.574);
+    color :rgb(3, 41, 117);
+    border: none;
+    
+}
+.start_button:hover{
+    background-color: rgb(75, 127, 222);;
+    transition: 0.8s;
+    cursor: pointer;
+    color:rgb(255, 255, 255)
+}
+
+@keyframes rotateIconFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-800px) rotate(-180deg);
+        color: white;
+        font-size: 3rem;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+.start_button i {
+    animation: rotateIconFromLeft 1s ease-out;
+    margin-right: 10px;
+}
+.start_button:active{
+    animation: none;
+}
+
+.home_link:hover, .instruction:hover, .about_link:hover{
+    font-size: 2.5rem;
+}
+.home_link:active, .instruction:active, .about_link:active{
+    color:rgb(75, 127, 222);
+}
